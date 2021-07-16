@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CursoDesignPatterns
+﻿namespace CursoDesignPatterns
 {
-    public abstract class TemplateDeImpostoCondicional : IImposto
+    public abstract class TemplateDeImpostoCondicional : Imposto
     {
-        public double Calcula(Orcamento orcamento)
+        public TemplateDeImpostoCondicional(Imposto outroImposto) : base (outroImposto) { }
+        public TemplateDeImpostoCondicional() : base () { }
+
+        public override double Calcula(Orcamento orcamento)
         {
            if(DeveUsarMaximaTaxacao(orcamento))
             {

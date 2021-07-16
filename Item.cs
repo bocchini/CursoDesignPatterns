@@ -15,6 +15,5 @@ namespace CursoDesignPatterns
             Valor = valor;
         }
 
-
     }
 }
