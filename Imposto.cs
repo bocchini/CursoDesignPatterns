@@ -14,7 +14,7 @@
         {
             this.OutroImposto = null;
         }
-        public abstract double Calcula(Orcamento orcamento);
+        public abstract double Calcula(Orcamento orcamento); 
 
         protected double CalculoDoOutroImposto(Orcamento orcamento)
         {
