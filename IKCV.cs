@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace CursoDesignPatterns
 {
     public class IKCV : TemplateDeImpostoCondicional
     {
+
+        public IKCV() : base() { }
+
+        public IKCV(Imposto outroImposto) : base(outroImposto) { }
+
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
-            return orcamento.Valor > 500 && temItemMarioQueCemReaisNo(orcamento);           
+            return orcamento.Valor > 500 && temItemMarioQueCemReaisNo(orcamento);         
         }
 
         public override double MaximaTaxacao(Orcamento orcamento)
@@ -26,7 +27,6 @@ namespace CursoDesignPatterns
             foreach (Item item in orcamento.Itens)
             {
                 if (item.Valor > 100) return true;
-
             }
             return false;
         }
